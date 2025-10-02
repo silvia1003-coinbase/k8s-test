@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/silvia1003-coinbase/k8s-test.git
+    targetRevision: HEAD
+    path: apps
+  destination:
+    server: https://kubernetes.default.svc
+    name: minikube
+    namespace: default
+  syncPolicy:
+    automated: {}   # auto-sync enabled
