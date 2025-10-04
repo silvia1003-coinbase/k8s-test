@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: nginx:latest
+          image: bigvict80/hello-node:1.0.0
           ports:
-            - containerPort: 80
+          - containerPort: 3000
