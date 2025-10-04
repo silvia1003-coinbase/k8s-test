@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: hello-node
-          image: bigvict80/hello-node:latest
+          image: bigvict80/hello-node:v1.0.0
           ports:
             - containerPort: 3000
 ---
