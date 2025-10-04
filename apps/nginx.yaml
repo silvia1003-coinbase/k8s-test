@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-pod
+  name: hello-node
   namespace: default
   labels:
-    app: nginx
+    app: hello-node
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: nginx
+      app: hello-node
   template:
     metadata:
       labels:
-        app: nginx
+        app: hello-node
     spec:
       containers:
-        - name: nginx
+        - name: hello-node
           image: bigvict80/hello-node:1.0.0
           ports:
           - containerPort: 3000
